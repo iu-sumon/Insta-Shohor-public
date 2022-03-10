@@ -25,7 +25,7 @@ const isLiked = (id) => {
 const addToLiked = (id) => {
 
     
-    likedPostsId.plus(id); 
+    likedPostsId.push(id); 
 
     showPosts();
 };
@@ -152,11 +152,13 @@ const createPost = (post) => {
 };
 
 const showPosts = (posts) => {
+  console.log(posts);
 
     const productsContainer = document.getElementById( "posts" );
-    productsContainer.innerHTML = "";
+    productsContainer.innerHTML = " ";
 
     posts.forEach((post) => {
+      console.log(post);
         const div = createPost(post);
         productsContainer.appendChild(div);
     });
