@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
+body
+{
+  background-color: hsl(0, 0%, 60%) !important;
+}
+.color-1
+{
+  background-color: #6047ec !important;
+}
+.color-2
+{
+  background-color:black;
+}
 /* CSS Reset */
 *,
 *::after,
@@ -46,12 +58,14 @@ img {
 
 #posts{
   display: grid;
-  gap: 10px;
+  gap: 20px;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
   margin: auto;
+  padding:20px;
   align-items: center;
   justify-content: center;
+  
 }
 
 /* Post */

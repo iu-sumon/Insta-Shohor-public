@@ -30,9 +30,7 @@ const reportPost = (id) => {
 };
 
 const displayContent = (text) => {
-  return text.length < 30
-    ? text
-    : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
+  return text.length > 30 ? text.slice(0, 30) + "<span class='fw-bold'>... read more</span>": text;
 };
 
 const switchTab = (id) => {
@@ -148,18 +146,18 @@ const showPosts = (posts) => {
 };
 
 const displayLikedPosts = () => {
-  const likedPosts = getLikedPosts();
   document.getElementById("liked").textContent = "";
-  likedPosts.forEach((post) => {
+  const likedPosts = getLikedPosts();
+   likedPosts.forEach((post) => {
     const div = createPost(post);
     document.getElementById("liked").appendChild(div);
   });
 };
 
 const displayReportedPosts = () => {
-  const reportedPosts = getReportedPosts();
   document.getElementById("reported").textContent = "";
-  reportedPosts.forEach((post) => {
+  const reportedPosts = getReportedPosts();
+    reportedPosts.forEach((post) => {
     const div = createPost(post);
     document.getElementById("reported").appendChild(div);
   });
