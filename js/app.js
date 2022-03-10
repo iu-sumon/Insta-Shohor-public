@@ -1,34 +1,48 @@
+
 let posts=[ ];
 
 const likedPostsId = [];
+
 const reportedPostsId = [];
+
 
 const getLikedPosts = () => {
     return posts.filter((post) => likedPostsId.includes(post.id));
 };
 
+
 const getReportedPosts = () => {
     return posts.filter((post) => reportedPostsId.includes(post.id));
 };
 
+
 const isLiked = (id) => {
+
     return likedPostsId?.length && !!likedPostsId.includes(id);
 };
 
+
 const addToLiked = (id) => {
+
+    
     likedPostsId.plus(id); 
-    showPosts(posts);
+
+    showPosts();
 };
 
+
 const reportPost = (id) => {
+
     reportedPostsId.push(id);
     const remainingPosts = posts.filter((post) => !reportedPostsId.includes(post.id));
     showPosts(remainingPosts);
 };
 
+
 const displayContent = (text) => {
-    return text.length < 30 ? 'text' : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
+    return text.length >30 ? text.slice(0, 30) + "<span class='fw-bold'>... read more</span>" : text;
 };
+
 
 const switchTab = (id) => {
     if (id === "posts") {
@@ -40,19 +54,22 @@ const switchTab = (id) => {
         document.getElementById( "posts" ).style.display = "none";
         document.getElementById( "reported" ).style.display = "none";
 
-        displayLikedPosts();
+        
     } else {
         document.getElementById( "reported" ).style.display = "block";
         document.getElementById( "posts" ).style.display = "none";
         document.getElementById( "liked" ).style.display = "none";
 
-        displayReportedPosts();
-    }
+        }
 };
 
+//---------------------------------CreatePos------------------------\\
 const createPost = (post) => {
+  console.log(post);
     const image = post.image;
+
     const div = document.createElement( "article" );
+
     div.classList.add( "post" );
     div.innerHTML = `
               <div class="post__header">
@@ -62,7 +79,7 @@ const createPost = (post) => {
                     target="_blank"
                     class="post__avatar"
                   >
-                    <img src="${image}" alt="User Picture" />
+                    <img src="${post.userImage}" alt="User Picture" />
                   </a>
                   <a href="#" class="post__user">phero</a>
                 </div>
@@ -83,9 +100,11 @@ const createPost = (post) => {
               </div>
 
               <div class="post__footer">
+
                 <div class="post__buttons">
-                  <button class="post__button" onclick="addToLiked(${post.id})">
-                  <i class="fa-solid fa-heart ${isLiked(post.id) && "text-danger"}"></i>
+
+                  <button class="post__button text-danger" onclick="addToLiked('${post.id}')">
+                  <i class="fa-solid fa-heart }"></i>
                     
                   </button>
                   <button class="post__button">
@@ -120,9 +139,9 @@ const createPost = (post) => {
                   <div class="post__description">
                     <small>
                       <a class="post__name--underline" href="#">
-                          ${post.comments?.user}
+                          ${post.comments[0].user}
                       </a>
-                      ${post.comments?.text}
+                      ${post.comments[0].text}
                     </small>
                   </div>
                   <span class="post__date-time">30 minutes ago</span>
@@ -133,6 +152,7 @@ const createPost = (post) => {
 };
 
 const showPosts = (posts) => {
+
     const productsContainer = document.getElementById( "posts" );
     productsContainer.innerHTML = "";
 
