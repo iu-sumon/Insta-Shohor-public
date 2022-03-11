@@ -2,204 +2,224 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Insta-Sohor</title>
+  <title>Insta-Sohor</title>
 
-    <!------------------------------ link-CSS Style---------------------------- -->
+  <!------------------------------ link-CSS Style---------------------------- -->
 
-    <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/style.css" />
 
-    <!---------------------------- Latest compiled and minified CSS------------------ -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <!---------------------------- Latest compiled and minified CSS------------------ -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 
-    <!-------------------------------- google Montserrat  font --------------------------- -->
+  <!-------------------------------- google Montserrat  font --------------------------- -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
 
-    <!------------------------------ Font-awesome Link ------------------------------------->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!------------------------------ Font-awesome Link ------------------------------------->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
 
-    <!------------------------------ Header-Code-Start Here ------------------------------------>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light px-5 py-3 rounded color-1">
-            <a class="navbar-brand text-white fw-bold fs-3" href="#">INSTA-SOHOR</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+  <!------------------------------ Header-Code-Start Here ------------------------------------>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light px-5 py-3 rounded color-1">
+      <a class="navbar-brand text-white fw-bold fs-3" href="#">INSTA-SOHOR</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-link active fs-5 text-white" role="button" onclick="switchTab( 'posts' )">
+            <i class="fa-solid fa-house"></i>
+          </li>
+
+          <li class="nav-link active fs-5" role="button" onclick="switchTab( 'liked' )">
+            <i class="fa-solid fa-heart text-danger"></i>
+          </li>
+
+          <li class="nav-link active fs-5 text-white" role="button" onclick="switchTab( 'reported' )">
+            <i class="fa-solid fa-eye-slash"></i>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!------------------------------ Header-Code-End Here ------------------------------------>
+
+
+  <!------------------------------ Main-Code-Start Here ------------------------------------>
+
+  <main class="main container mx-auto p-3">
+
+
+
+    <div id="posts">
+
+
+    </div>
+
+
+    <div id="liked">
+      <h1>Liked posts</h1>
+
+
+    </div>
+
+
+    <div id="reported">
+      <h1>Reported posts</h1>
+
+
+
+    </div>
+
+  </main>
+
+  <!------------------------------ Main-Code-End Here ------------------------------------>
+
+
+
+  <!----------------------------------Bonus-Part Start Here----------------------------------->
+
+  <section class="">
+    <div class="container p-5 m-5  mx-auto rounded-3 color-1">
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+
+              <strong>How does javascript work?</strong>
+
             </button>
-
-            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-link active fs-5 text-white" role="button" onclick="switchTab( 'posts' )">
-                        <i class="fa-solid fa-house"></i>
-                    </li>
-
-                    <li class="nav-link active fs-5" role="button" onclick="switchTab( 'liked' )">
-                        <i class="fa-solid fa-heart text-danger"></i>
-                    </li>
-
-                    <li class="nav-link active fs-5 text-white" role="button" onclick="switchTab( 'reported' )">
-                        <i class="fa-solid fa-eye-slash"></i>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <!------------------------------ Header-Code-End Here ------------------------------------>
-
-
-    <!------------------------------ Main-Code-Start Here ------------------------------------>
-
-    <main class="main container mx-auto p-3">
-
-
-
-        <div id="posts">
-
-
-        </div>
-
-
-        <div id="liked">
-            <h1>Liked posts</h1>
-
-
-        </div>
-
-
-        <div id="reported">
-            <h1>Reported posts</h1>
-
-
-
-        </div>
-
-   </main>
-
-    <!------------------------------ Main-Code-End Here ------------------------------------>
-
-
-
-    <!----------------------------------Bonus-Part Start Here----------------------------------->
-
-    <section class="">
-       <div class="container p-5 m-5  mx-auto rounded-3 color-1">
-        <div class="accordion accordion-flush" id="accordionFlushExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingOne">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                
-                   <strong>How does javascript work?</strong>
-              
-                </button>
-              </h2>
-              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-                  JavaScript is an interpreted language that means javascript code is executed  in line by line manner.We can understand how a typical JavaScript engine works .JavaScript engine the source code goes through several steps.Let us understand each of these steps.
-                 <b>Step-1:Parser</b>(our code is first received by the "parser".The parser's job is to check the JavaScript code for syntactic errors in line by line manner )
-                 <b>Step-2:AST</b>(Once the parser checks all JavaScript codes and gets satisfied that there are no mistakes/errors in the code, it creates the data structure called AST (it stands for Abstract Syntax Tree).)
-                 <b>Step-3:Converted (0,1)</b> The JavaScript engine converts the JavaScript code into the machine code
-                <b>Step-4:Machine Code</b>(The converted code is sent to the system for execution, and finally, that byte code run by the system/engine)
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                 <strong>Local Storage vs Session Storage</strong>
-                </button>
-              </h2>
-              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body"> 
-                  <table class="table table-hover">
-                    <tbody>
-                      <tr>
-                        <th scope="col">No.</th>
-                        <th scope="col" class="text-center">Local Storage</th>
-                        <th scope="col" class="text-center">Session Storage</th>
-                        
-                      </tr>
-                        <tr>
-                          <td>1</td>
-                          <td>LocalStorage is a property that load JavaScript sites to save key-value pairs in a web browser and store some data for the long term.</td>
-                          <td>SessionStorage is a property that load JavaScript sites to save key-value pairs in a web browser and store some data temporarily.</td>
-                        </tr>
-                        <tr>
-                          <td>2</td>
-                          <td>Persists the data until the user explicitly deletes the data.</td>
-                          <td>Persists a storage area for the duration of the page session.</td>
-                        </tr>
-                        <tr>
-                          <td>3</td>
-                          <td>Data will not be deleted when windows or tab is closed.</td>
-                          <td>Data will be deleted when windows or tab is closed.</td>
-                        </tr>
-                        <tr>
-                          <td>4</td>
-                          <td>It can be accessed from any window.</td>
-                          <td>It can be accessed from only the same window.</td>
-                        </tr>
-                        <tr>
-                          <td>5</td>
-                          <td>Storage capacity maximum 10-15MB </td>
-                          <td>Storage capacity maximum 5MB </td>
-                        </tr>
-                        <tr>
-                          <td>6</td>
-                          <td>No expiration date</td>
-                          <td>Expires on tab close</td>
-                        </tr>
-                    </tbody>
-                  </table>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                 <strong>What does javascript event loop do?</strong>
-                </button>
-              </h2>
-              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">JavaScript is single-threaded .JavaScript is non-blocking .JavaScript is a scripting language for the web.It is an interpreted language, which means it does not need a compiler to translate its code.JavaScript code runs directly in a web browser.The event loop is a process that waits for the Call Stack to be clear before pushing callbacks from the Task Queue to the Call Stack.Once the Stack is clear,the event loop triggers and checks the Task Queue for available callbacks.If there are any, it pushes it to the Call Stack, waits for the Call Stack to be clear again, and repeats the same process.</div>
-              </div>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              JavaScript is an interpreted language that means javascript code is executed in line by line manner.We can
+              understand how a typical JavaScript engine works .JavaScript engine the source code goes through several
+              steps.Let us understand each of these steps.
+              <b>Step-1:Parser</b>(our code is first received by the "parser".The parser's job is to check the
+              JavaScript code for syntactic errors in line by line manner )
+              <b>Step-2:AST</b>(Once the parser checks all JavaScript codes and gets satisfied that there are no
+              mistakes/errors in the code, it creates the data structure called AST (it stands for Abstract Syntax
+              Tree).)
+              <b>Step-3:Converted (0,1)</b> The JavaScript engine converts the JavaScript code into the machine code
+              <b>Step-4:Machine Code</b>(The converted code is sent to the system for execution, and finally, that byte
+              code run by the system/engine)
             </div>
           </div>
-       </div>
-    </section>
-    
-    <!----------------------------------Bonus-Part End Here----------------------------------->
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              <strong>Local Storage vs Session Storage</strong>
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <table class="table table-hover">
+                <tbody>
+                  <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col" class="text-center">Local Storage</th>
+                    <th scope="col" class="text-center">Session Storage</th>
+
+                  </tr>
+                  <tr>
+                    <td><b>1</b></td>
+                    <td>LocalStorage is a property that load JavaScript sites to save key-value pairs in a web browser
+                      and store some data for the long term.</td>
+                    <td>SessionStorage is a property that load JavaScript sites to save key-value pairs in a web browser
+                      and store some data temporarily.</td>
+                  </tr>
+                  <tr>
+                    <td><b>2</b></td>
+                    <td>Persists the data until the user explicitly deletes the data.</td>
+                    <td>Persists a storage area for the duration of the page session.</td>
+                  </tr>
+                  <tr>
+                    <td><b>3</b></td>
+                    <td>Data will not be deleted when windows or tab is closed.</td>
+                    <td>Data will be deleted when windows or tab is closed.</td>
+                  </tr>
+                  <tr>
+                    <td><b>4</b></td>
+                    <td>It can be accessed from any window.</td>
+                    <td>It can be accessed from only the same window.</td>
+                  </tr>
+                  <tr>
+                    <td><b>5</b></td>
+                    <td>Storage capacity maximum 10-15MB </td>
+                    <td>Storage capacity maximum 5MB </td>
+                  </tr>
+                  <tr>
+                    <td><b>6</b></td>
+                    <td>No expiration date</td>
+                    <td>Expires on tab close</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                <strong>What does javascript event loop do?</strong>
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+              data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">JavaScript is single-threaded .JavaScript is non-blocking .JavaScript is a
+                scripting language for the web.It is an interpreted language, which means it does not need a compiler to
+                translate its code.JavaScript code runs directly in a web browser.The event loop is a process that waits
+                for the Call Stack to be clear before pushing callbacks from the Task Queue to the Call Stack.Once the
+                Stack is clear,the event loop triggers and checks the Task Queue for available callbacks.If there are
+                any, it pushes it to the Call Stack, waits for the Call Stack to be clear again, and repeats the same
+                process.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!----------------------------------Bonus-Part End Here----------------------------------->
 
 
 
-    <!------------------------------ Footer-Code-Start Here ------------------------------------>
+  <!------------------------------ Footer-Code-Start Here ------------------------------------>
 
-    <footer class="color-2 p-5">
-        <p class="text-center text-white">Copyright © 2022 Insta-Sohor</p>
-        <p class=" text-center text-white">All rights reserved</p>
-    </footer>
+  <footer class="color-2 p-5">
+    <p class="text-center text-white">Copyright © 2022 Insta-Sohor</p>
+    <p class=" text-center text-white">All rights reserved</p>
+  </footer>
 
-    <!------------------------------ Footer-Code-End Here ------------------------------------>
+  <!------------------------------ Footer-Code-End Here ------------------------------------>
 
-    <!--------------------------------- bootstrap-js-file ------------------------------------->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+  <!--------------------------------- bootstrap-js-file ------------------------------------->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
 
 
-    <!---------------------- -----------add javascript  file  ---------------------------------->
+  <!---------------------- -----------add javascript  file  ---------------------------------->
 
-    <script src="./js/app.js"></script>
+  <script src="./js/app.js"></script>
 </body>
 
 </html>
