@@ -105,27 +105,73 @@
                 </button>
               </h2>
               <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                <div class="accordion-body">
+                  JavaScript is an interpreted language that means javascript code is executed  in line by line manner.We can understand how a typical JavaScript engine works .JavaScript engine the source code goes through several steps.Let us understand each of these steps.
+                 <b>Step-1:Parser</b>(our code is first received by the "parser".The parser's job is to check the JavaScript code for syntactic errors in line by line manner )
+                 <b>Step-2:AST</b>(Once the parser checks all JavaScript codes and gets satisfied that there are no mistakes/errors in the code, it creates the data structure called AST (it stands for Abstract Syntax Tree).)
+                 <b>Step-3:Converted (0,1)</b> The JavaScript engine converts the JavaScript code into the machine code
+                <b>Step-4:Machine Code</b>(The converted code is sent to the system for execution, and finally, that byte code run by the system/engine)
+                </div>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="flush-headingTwo">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                  Accordion Item #2
+                 <strong>Local Storage vs Session Storage</strong>
                 </button>
               </h2>
               <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                <div class="accordion-body"> 
+                  <table class="table table-hover">
+                    <tbody>
+                      <tr>
+                        <th scope="col">No.</th>
+                        <th scope="col" class="text-center">Local Storage</th>
+                        <th scope="col" class="text-center">Session Storage</th>
+                        
+                      </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>LocalStorage is a property that load JavaScript sites to save key-value pairs in a web browser and store some data for the long term.</td>
+                          <td>SessionStorage is a property that load JavaScript sites to save key-value pairs in a web browser and store some data temporarily.</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>Persists the data until the user explicitly deletes the data.</td>
+                          <td>Persists a storage area for the duration of the page session.</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>Data will not be deleted when windows or tab is closed.</td>
+                          <td>Data will be deleted when windows or tab is closed.</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>It can be accessed from any window.</td>
+                          <td>It can be accessed from only the same window.</td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>Storage capacity maximum 10-15MB </td>
+                          <td>Storage capacity maximum 5MB </td>
+                        </tr>
+                        <tr>
+                          <td>6</td>
+                          <td>No expiration date</td>
+                          <td>Expires on tab close</td>
+                        </tr>
+                    </tbody>
+                  </table>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="flush-headingThree">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                  Accordion Item #3
+                 <strong>What does javascript event loop do?</strong>
                 </button>
               </h2>
               <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                <div class="accordion-body">JavaScript is single-threaded .JavaScript is non-blocking .JavaScript is a scripting language for the web.It is an interpreted language, which means it does not need a compiler to translate its code.JavaScript code runs directly in a web browser.The event loop is a process that waits for the Call Stack to be clear before pushing callbacks from the Task Queue to the Call Stack.Once the Stack is clear,the event loop triggers and checks the Task Queue for available callbacks.If there are any, it pushes it to the Call Stack, waits for the Call Stack to be clear again, and repeats the same process.</div>
               </div>
             </div>
           </div>
@@ -139,7 +185,7 @@
     <!------------------------------ Footer-Code-Start Here ------------------------------------>
 
     <footer class="color-2 p-5">
-        <p class="text-center text-white">Copyright © 2020 Insta-Sohor</p>
+        <p class="text-center text-white">Copyright © 2022 Insta-Sohor</p>
         <p class=" text-center text-white">All rights reserved</p>
     </footer>
 
