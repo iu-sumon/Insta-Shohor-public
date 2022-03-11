@@ -65,6 +65,7 @@ img {
   padding:20px;
   align-items: center;
   justify-content: center;
+ 
   
 }
 
@@ -76,6 +77,7 @@ img {
   overflow: hidden;
   border: 1px solid var(--border);
   text-align: left;
+  border-radius: 8px !important;
 
 }
 
